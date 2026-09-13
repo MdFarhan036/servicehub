@@ -1,0 +1,29 @@
+.media-preview {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--color-bg-alt);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.media-preview img, .media-preview video {
+  width: 40px; height: 40px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.preview-name {
+  flex: 1;
+  font-size: 12px;
+  color: var(--color-text-gray);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.preview-remove {
+  color: var(--color-text-gray);
+  font-size: 14px;
+}
+.preview-remove:hover { color: var(--color-danger); }

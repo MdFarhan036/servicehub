@@ -1,0 +1,275 @@
+/* ═══════════════════════════════════════════════════════════
+   serviceCard.css  –  Light Editorial Aesthetic
+   Font: 'Fraunces' (display) + 'DM Sans' (body)
+   Palette: White surface · Slate text · Indigo accent
+═══════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+/* ── tokens ── */
+:root {
+  --sc-bg:         #ffffff;
+  --sc-surface:    #f5f7ff;
+  --sc-border:     #e2e6f3;
+  --sc-accent:     #4f46e5;
+  --sc-accent2:    #3730b8;
+  --sc-accent-lt:  rgba(79, 70, 229, 0.09);
+  --sc-text:       #0f172a;
+  --sc-muted:      #64748b;
+  --sc-star:       #f59e0b;
+  --sc-success:    #10b981;
+  --sc-danger:     #ef4444;
+  --sc-radius:     20px;
+  --sc-font-d:     'Fraunces', Georgia, serif;
+  --sc-font-b:     'DM Sans', sans-serif;
+}
+
+/* ── card ── */
+.sc-card {
+  position: relative;
+  background: var(--sc-bg);
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--sc-font-b);
+  box-shadow: 0 4px 16px rgba(79, 70, 229, 0.05);
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.sc-card:hover {
+  border-color: rgba(79, 70, 229, 0.28);
+  box-shadow: 0 20px 52px rgba(79, 70, 229, 0.13);
+  transform: translateY(-8px);
+}
+
+/* ── image zone ── */
+.sc-img-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.sc-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.55s ease;
+}
+
+.sc-card:hover .sc-img {
+  transform: scale(1.08);
+}
+
+/* gradient overlay at bottom of image */
+.sc-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 45%,
+    rgba(15, 23, 42, 0.18) 100%
+  );
+  pointer-events: none;
+}
+
+/* ── badge ── */
+.sc-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--sc-danger);
+  color: #ffffff;
+  font-family: var(--sc-font-b);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 100px;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+/* ── wishlist button ── */
+.sc-wishlist {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--sc-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #94a3b8;
+  transition: color 0.25s, background 0.25s, transform 0.2s, box-shadow 0.25s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.sc-wishlist svg {
+  width: 16px;
+  height: 16px;
+}
+
+.sc-wishlist:hover {
+  transform: scale(1.12);
+  box-shadow: 0 6px 18px rgba(239, 68, 68, 0.2);
+  color: var(--sc-danger);
+}
+
+.sc-wishlist--active {
+  color: var(--sc-danger);
+  background: #fff0f0;
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+/* ── body ── */
+.sc-body {
+  padding: 20px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+/* ── top row: title + rating ── */
+.sc-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.sc-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--sc-text);
+  margin: 0;
+  line-height: 1.35;
+  flex: 1;
+}
+
+.sc-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--sc-star);
+  white-space: nowrap;
+  background: rgba(245, 158, 11, 0.1);
+  padding: 3px 8px;
+  border-radius: 100px;
+}
+
+.sc-star {
+  width: 13px;
+  height: 13px;
+  fill: var(--sc-star);
+}
+
+/* ── price ── */
+.sc-price {
+  font-family: var(--sc-font-d);
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  background: linear-gradient(120deg, var(--sc-accent) 30%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 4px 0 12px;
+}
+
+/* ── actions ── */
+.sc-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+}
+
+/* view details */
+.sc-details-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--sc-accent);
+  color: #ffffff;
+  font-family: var(--sc-font-b);
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 11px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.28);
+}
+
+.sc-details-btn svg {
+  width: 15px;
+  height: 15px;
+  transition: transform 0.2s;
+}
+
+.sc-details-btn:hover {
+  background: var(--sc-accent2);
+  box-shadow: 0 10px 28px rgba(79, 70, 229, 0.36);
+}
+
+.sc-details-btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* add to cart */
+.sc-cart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  background: var(--sc-surface);
+  border: 1.5px solid var(--sc-border);
+  color: var(--sc-text);
+  font-family: var(--sc-font-b);
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 11px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.25s, border-color 0.25s, color 0.25s, transform 0.2s;
+}
+
+.sc-cart-btn svg {
+  width: 15px;
+  height: 15px;
+}
+
+.sc-cart-btn:hover:not(.sc-cart-btn--added) {
+  background: var(--sc-accent-lt);
+  border-color: rgba(79, 70, 229, 0.35);
+  color: var(--sc-accent);
+  transform: translateY(-1px);
+}
+
+/* added state */
+.sc-cart-btn--added {
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: var(--sc-success);
+  cursor: default;
+}
+
+.sc-cart-btn--added svg {
+  stroke: var(--sc-success);
+}

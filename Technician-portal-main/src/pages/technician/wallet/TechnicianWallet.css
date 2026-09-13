@@ -1,0 +1,225 @@
+.wallet-page {
+  width: 100%;
+  padding: 30px;
+  background: #f7f8fc;
+  min-height: 100vh;
+}
+
+.wallet-header {
+  margin-bottom: 30px;
+}
+
+.wallet-header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.wallet-header p {
+  margin-top: 6px;
+  color: #777;
+}
+
+
+/* STATS */
+
+.wallet-stats {
+  display: grid;
+  grid-template-columns:
+    repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.wallet-card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+.wallet-card span {
+  color: #777;
+  font-size: 14px;
+}
+
+.wallet-card h2 {
+  margin: 12px 0 0;
+  font-size: 24px;
+}
+
+.wallet-card.primary {
+  background: #1f2937;
+  color: white;
+}
+
+.wallet-card.primary span {
+  color: #d1d5db;
+}
+
+
+/* CONTENT */
+
+.wallet-content {
+  display: grid;
+  grid-template-columns:
+    350px 1fr;
+  gap: 25px;
+}
+
+
+/* WITHDRAW FORM */
+
+.withdraw-section {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.withdraw-section h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  margin-bottom: 7px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 11px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  font-size: 14px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.withdraw-section button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 7px;
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.withdraw-section button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* HISTORY */
+
+.withdraw-history {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.withdraw-history h2 {
+  margin-top: 0;
+}
+
+.withdraw-table-wrapper {
+  overflow-x: auto;
+}
+
+.withdraw-history table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.withdraw-history th,
+.withdraw-history td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.withdraw-history th {
+  color: #777;
+  font-size: 13px;
+}
+
+
+/* STATUS */
+
+.status {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.status.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status.approved {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.status.paid {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status.rejected {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+
+/* EMPTY */
+
+.empty-state {
+  padding: 30px;
+  text-align: center;
+  color: #777;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 1000px) {
+
+  .wallet-stats {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .wallet-content {
+    grid-template-columns:
+      1fr;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .wallet-page {
+    padding: 18px;
+  }
+
+  .wallet-stats {
+    grid-template-columns:
+      1fr;
+  }
+
+}

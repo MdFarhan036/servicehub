@@ -1,0 +1,51 @@
+/* CONTAINER */
+.terms-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+/* TITLE */
+.terms-title {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #2563eb;
+  text-align: center;
+}
+
+/* INTRO */
+.terms-intro {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* SECTION */
+.terms-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+}
+
+/* HEADING */
+.terms-section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+/* TEXT */
+.terms-section p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* HOVER EFFECT */
+.terms-section:hover {
+  transform: translateY(-3px);
+  transition: 0.3s;
+}

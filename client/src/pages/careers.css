@@ -1,0 +1,55 @@
+/* CONTAINER */
+.careers-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* TITLE */
+.careers-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #2563eb;
+}
+
+/* TEXT */
+.careers-text {
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* ROLES GRID */
+.careers-roles {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+/* CARD */
+.role-card {
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+/* HOVER */
+.role-card:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(to right, #eef2ff, #f5f3ff);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .careers-roles {
+    grid-template-columns: 1fr;
+  }
+}

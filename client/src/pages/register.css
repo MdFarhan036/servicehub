@@ -1,0 +1,151 @@
+/* CONTAINER */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* BOX */
+.register-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* TITLE */
+.register-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* ERROR */
+.register-error {
+  color: #ef4444;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* INPUT */
+.register-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* BUTTON */
+.register-btn {
+  width: 100%;
+  padding: 12px;
+  background: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.register-btn:hover {
+  background: #15803d;
+}
+.register-subtitle {
+  text-align: center;
+  color: #777;
+  margin: -10px 0 25px;
+  font-size: 14px;
+}
+
+.register-field {
+  margin-bottom: 16px;
+}
+
+.register-field label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.register-field label span {
+  color: #e53935;
+}
+
+.register-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.phone-input span {
+  padding: 12px;
+  background: #f5f5f5;
+  color: #555;
+  border-right: 1px solid #ddd;
+}
+
+.phone-input input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px;
+  font-size: 14px;
+}
+
+.register-textarea {
+  resize: vertical;
+}
+
+.terms-checkbox {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-size: 13px;
+  color: #666;
+  margin: 15px 0;
+}
+
+.terms-checkbox input {
+  margin-top: 3px;
+}
+
+.register-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 14px;
+  color: #666;
+}
+
+.login-link button {
+  border: none;
+  background: none;
+  color: #007bff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .register-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

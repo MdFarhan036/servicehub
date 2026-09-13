@@ -1,0 +1,310 @@
+/* ================= CONTAINER ================= */
+.service-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+/* BACK BUTTON */
+.back-btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  color: #1d4ed8;
+}
+
+/* ================= LAYOUT ================= */
+.service-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* ================= LEFT ================= */
+.service-left {
+  flex: 2;
+}
+
+/* ================= MAIN IMAGE ================= */
+.main-img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  transition: 0.4s ease;
+}
+
+.main-img:hover {
+  transform: scale(1.02);
+}
+
+/* ================= ABOUT BOX ================= */
+.box {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.box h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.box p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* ================= RIGHT CARD ================= */
+.service-right {
+  flex: 1;
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+  position: sticky;
+  top: 100px;
+}
+
+/* TITLE */
+.service-right h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #111827;
+}
+/* ================= HEADER ================= */
+.service-header {
+  margin-bottom: 20px;
+}
+
+/* TITLE */
+.service-header h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+/* META ROW */
+.service-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* RATING */
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #f59e0b;
+  font-weight: 500;
+}
+
+/* PRICE */
+.price {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2563eb;
+}
+/* ================= META (RATING + PRICE) ================= */
+.service-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.rating {
+  color: #f59e0b;
+  font-weight: 500;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+/* ================= FORM ================= */
+.form {
+  margin-top: 10px;
+}
+
+.form input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  background: #f9fafb;
+  transition: all 0.25s ease;
+}
+
+
+.form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  background: #f9fafb;
+  transition: all 0.25s ease;
+}
+
+/* FOCUS */
+.form input:focus {
+  border-color: #6366f1;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
+  outline: none;
+}
+
+/* DATE + TIME */
+.form input[type="date"],
+.form input[type="time"] {
+  cursor: pointer;
+}
+
+/* BUTTON */
+.form button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* HOVER */
+.form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(99,102,241,0.35);
+}
+
+/* ================= ALERTS ================= */
+.success {
+  background: #dcfce7;
+  color: #15803d;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+.error {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .service-layout {
+    flex-direction: column;
+  }
+
+  .service-right {
+    position: static;
+  }
+}/* ================= REVIEW BOX ================= */
+.review-box {
+  margin-top: 30px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.review-box h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 18px;
+}
+
+/* Rating Dropdown */
+.review-box select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  outline: none;
+  background: #fff;
+  cursor: pointer;
+}
+
+.review-box select:focus {
+  border-color: #2563eb;
+}
+
+/* Review Textarea */
+.review-box textarea {
+  width: 100%;
+  min-height: 120px;
+  resize: vertical;
+  padding: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  margin-bottom: 18px;
+  font-family: inherit;
+}
+
+.review-box textarea:focus {
+  border-color: #2563eb;
+}
+
+/* Submit Button */
+.review-box button {
+  width: 100%;
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.review-box button:hover {
+  background: #1d4ed8;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .review-box {
+    padding: 18px;
+    margin-top: 20px;
+  }
+
+  .review-box h3 {
+    font-size: 18px;
+  }
+
+  .review-box button {
+    padding: 12px;
+  }
+}

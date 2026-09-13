@@ -1,0 +1,444 @@
+/* Container */
+.about-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+/* Title */
+.about-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Text */
+.about-text {
+  color: #6b7280;
+  line-height: 1.7;
+  max-width: 700px;
+  font-size: 16px;
+}
+
+
+.about-page {
+  background: #fff;
+  color: #171717;
+}
+
+.about-container {
+  width: min(1180px, 92%);
+  margin: auto;
+}
+
+/* HERO */
+
+.about-hero {
+  min-height: 620px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      120deg,
+      #111 0%,
+      #222 50%,
+      #111 100%
+    );
+}
+
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 75% 30%,
+      rgba(255, 255, 255, 0.12),
+      transparent 30%
+    );
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 80px 0;
+}
+
+.about-eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 22px;
+  opacity: 0.8;
+}
+
+.about-hero h1 {
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.05;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -2px;
+}
+
+.about-hero h1 span {
+  background: linear-gradient(
+    90deg,
+    #ff4d67,
+    #ff8a5c
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-hero p {
+  max-width: 650px;
+  margin: 25px 0;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #d5d5d5;
+}
+
+.about-hero-buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.about-primary-btn,
+.about-secondary-btn {
+  padding: 14px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.about-primary-btn {
+  background: #fff;
+  color: #111;
+}
+
+.about-secondary-btn {
+  border: 1px solid #777;
+  color: #fff;
+}
+
+/* STATS */
+
+.about-stats {
+  border-bottom: 1px solid #eee;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.stat-item {
+  padding: 35px 20px;
+  text-align: center;
+  border-right: 1px solid #eee;
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-item h2 {
+  margin: 0 0 6px;
+  font-size: 30px;
+}
+
+.stat-item p {
+  margin: 0;
+  color: #777;
+}
+
+/* STORY */
+
+.about-story {
+  padding: 100px 0;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.section-label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #777;
+}
+
+.story-content h2 {
+  font-size: 42px;
+  line-height: 1.15;
+  margin: 15px 0 25px;
+}
+
+.story-content p {
+  color: #666;
+  line-height: 1.8;
+}
+
+.story-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 13px 22px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 7px;
+}
+
+.story-visual {
+  position: relative;
+  min-height: 400px;
+}
+
+.visual-card {
+  padding: 35px;
+  border-radius: 18px;
+  background: #f6f6f6;
+  position: absolute;
+  width: 75%;
+  top: 20px;
+  right: 0;
+}
+
+.visual-card-small {
+  width: 65%;
+  top: 220px;
+  left: 0;
+  right: auto;
+  background: #111;
+  color: #fff;
+}
+
+.visual-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff;
+  color: #111;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.visual-card-small .visual-icon {
+  background: #fff;
+}
+
+.visual-card p {
+  color: #777;
+  line-height: 1.6;
+}
+
+.visual-card-small p {
+  color: #bbb;
+}
+
+/* HOW */
+
+.how-section {
+  padding: 100px 0;
+  background: #f7f7f7;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 55px;
+}
+
+.section-heading h2 {
+  font-size: 42px;
+  margin: 12px 0;
+}
+
+.section-heading p {
+  color: #777;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.step-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  position: relative;
+}
+
+.step-number {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #ccc;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.step-icon {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.step-card h3 {
+  margin-bottom: 10px;
+}
+
+.step-card p {
+  color: #777;
+  line-height: 1.6;
+}
+
+/* WHY */
+
+.why-section {
+  padding: 100px 0;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.benefit-card {
+  border: 1px solid #eee;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.benefit-card > span {
+  display: inline-grid;
+  place-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #f3f3f3;
+  margin-bottom: 20px;
+}
+
+.benefit-card p {
+  color: #777;
+  line-height: 1.6;
+}
+
+/* CTA */
+
+.about-cta {
+  background: #111;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.about-cta span {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #aaa;
+}
+
+.about-cta h2 {
+  max-width: 700px;
+  margin: 15px auto;
+  font-size: 44px;
+  line-height: 1.15;
+}
+
+.about-cta p {
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #fff;
+  color: #111;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .stats-grid,
+  .steps-grid,
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-hero {
+    min-height: 560px;
+  }
+
+  .about-hero h1 {
+    font-size: 42px;
+  }
+
+  .about-hero p {
+    font-size: 16px;
+  }
+
+  .about-hero-buttons {
+    flex-direction: column;
+  }
+
+  .about-primary-btn,
+  .about-secondary-btn {
+    text-align: center;
+  }
+
+  .stats-grid,
+  .steps-grid,
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-item {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .story-content h2,
+  .section-heading h2,
+  .about-cta h2 {
+    font-size: 32px;
+  }
+
+  .visual-card,
+  .visual-card-small {
+    position: relative;
+    width: 100%;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin-bottom: 20px;
+  }
+
+  .story-visual {
+    min-height: auto;
+  }
+}

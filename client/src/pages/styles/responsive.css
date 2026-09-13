@@ -1,0 +1,11 @@
+@media (max-width: 1024px) {
+  .container { padding: 0 18px; }
+}
+@media (max-width: 900px) {
+  :root { --sidebar-width: 0px; }
+}
+@media (max-width: 640px) {
+  h1 { font-size: 28px; }
+  h2 { font-size: 22px; }
+  .container { padding: 0 14px; }
+}

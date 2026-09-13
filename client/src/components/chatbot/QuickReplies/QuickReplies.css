@@ -1,0 +1,94 @@
+/* =========================================================
+   QUICK REPLIES
+========================================================= */
+
+.quick-replies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding: 8px 14px 10px;
+  background: #fff;
+  border-top: 1px solid var(--color-border-light);
+  max-height: 90px;
+  overflow-y: auto;
+}
+
+/* Individual quick reply */
+.quick-reply-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 13px;
+
+  border: 1px solid var(--color-primary-light);
+  border-radius: var(--radius-full);
+
+  background: var(--color-primary-lighter);
+  color: var(--color-primary);
+
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  white-space: nowrap;
+}
+
+/* Hover */
+.quick-reply-chip:hover {
+  background: var(--color-primary);
+  color: #0000;
+  border-color: var(--color-primary);
+
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(79, 70, 229, 0.18);
+}
+
+/* Click */
+.quick-reply-chip:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Keyboard accessibility */
+.quick-reply-chip:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Disabled state if needed later */
+.quick-reply-chip:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .quick-replies {
+    gap: 6px;
+    padding: 7px 10px 9px;
+    max-height: 82px;
+  }
+
+  .quick-reply-chip {
+    padding: 7px 11px;
+    font-size: 11.5px;
+  }
+}

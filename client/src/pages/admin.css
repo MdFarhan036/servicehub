@@ -1,0 +1,104 @@
+/* LOGIN STATE */
+.admin-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 18px;
+}
+
+/* MAIN */
+.admin-container {
+  min-height: 100vh;
+  background: #f9fafb;
+}
+
+/* CONTENT */
+.admin-content {
+  padding: 40px;
+}
+
+/* TITLE */
+.admin-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* GRID */
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* CARD */
+.admin-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.admin-card h3 {
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+/* COUNT */
+.admin-count {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* BOX */
+.admin-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* SUBTITLE */
+.admin-subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* LIST */
+.booking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ITEM */
+.booking-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* TEXT */
+.booking-service {
+  font-weight: 600;
+}
+
+.booking-meta {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-content {
+    padding: 20px;
+  }
+}

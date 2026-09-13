@@ -1,0 +1,276 @@
+/* ═══════════════════════════════════════════════════════════
+   HowItWorks.css  –  Light Editorial Aesthetic
+   Font: 'Fraunces' (display) + 'DM Sans' (body)
+   Palette: Soft lavender-white · Slate text · Indigo accent
+═══════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+/* ── tokens ── */
+:root {
+  --hiw-bg:        #ffffff;
+  --hiw-surface:   #f5f7ff;
+  --hiw-border:    #e2e6f3;
+  --hiw-accent:    #4f46e5;
+  --hiw-accent2:   #3730b8;
+  --hiw-accent-lt: rgba(79, 70, 229, 0.09);
+  --hiw-text:      #0f172a;
+  --hiw-muted:     #64748b;
+  --hiw-radius:    22px;
+  --hiw-font-d:    'Fraunces', Georgia, serif;
+  --hiw-font-b:    'DM Sans', sans-serif;
+}
+
+/* ── section ── */
+.hiw-section {
+  position: relative;
+  background: var(--hiw-bg);
+  padding: 100px 24px 120px;
+  font-family: var(--hiw-font-b);
+  overflow: hidden;
+}
+
+/* ── blobs ── */
+.hiw-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.16;
+  pointer-events: none;
+}
+
+.hiw-blob--a {
+  width: 440px;
+  height: 440px;
+  background: radial-gradient(circle, #a5b4fc, transparent 70%);
+  top: -80px;
+  right: -100px;
+}
+
+.hiw-blob--b {
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, #ddd6fe, transparent 70%);
+  bottom: -60px;
+  left: -80px;
+}
+
+/* ── wrapper ── */
+.hiw-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── header ── */
+.hiw-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.hiw-eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--hiw-accent);
+  background: var(--hiw-accent-lt);
+  border: 1px solid rgba(79, 70, 229, 0.18);
+  padding: 5px 14px;
+  border-radius: 100px;
+  margin-bottom: 18px;
+}
+
+.hiw-title {
+  font-family: var(--hiw-font-d);
+  font-size: clamp(36px, 6vw, 54px);
+  font-weight: 900;
+  line-height: 1.08;
+  color: var(--hiw-text);
+  margin: 0 0 14px;
+  letter-spacing: -1px;
+}
+
+.hiw-subtitle {
+  font-size: 16px;
+  color: var(--hiw-muted);
+  font-weight: 300;
+  margin: 0;
+}
+
+/* ── grid ── */
+.hiw-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .hiw-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .hiw-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── card ── */
+.hiw-card {
+  position: relative;
+  background: var(--hiw-surface);
+  border: 1px solid var(--hiw-border);
+  border-radius: var(--hiw-radius);
+  padding: 36px 24px 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  animation: hiw-in 0.5s ease both;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.hiw-card:hover {
+  border-color: rgba(79, 70, 229, 0.28);
+  box-shadow: 0 20px 50px rgba(79, 70, 229, 0.1);
+  transform: translateY(-8px);
+}
+
+@keyframes hiw-in {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── dashed connector ── */
+.hiw-connector {
+  position: absolute;
+  top: 44px;
+  right: -34px;
+  width: 60px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hiw-connector svg {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  .hiw-connector {
+    display: none;
+  }
+}
+
+/* ── icon bubble ── */
+.hiw-icon-wrap {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  background: var(--hiw-accent-lt);
+  border: 1.5px solid rgba(79, 70, 229, 0.18);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, box-shadow 0.3s;
+  margin-bottom: 4px;
+}
+
+.hiw-card:hover .hiw-icon-wrap {
+  background: var(--hiw-accent);
+  box-shadow: 0 10px 28px rgba(79, 70, 229, 0.28);
+}
+
+.hiw-icon {
+  font-size: 28px;
+  line-height: 1;
+  transition: transform 0.3s;
+}
+
+.hiw-card:hover .hiw-icon {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+/* step number badge */
+.hiw-step-num {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 24px;
+  height: 24px;
+  background: var(--hiw-accent);
+  color: #ffffff;
+  font-family: var(--hiw-font-d);
+  font-size: 12px;
+  font-weight: 900;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 10px rgba(79, 70, 229, 0.35);
+  border: 2px solid #ffffff;
+  transition: background 0.3s;
+}
+
+.hiw-card:hover .hiw-step-num {
+  background: var(--hiw-accent2);
+}
+
+/* ── text ── */
+.hiw-card-title {
+  font-family: var(--hiw-font-b);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--hiw-text);
+  margin: 0;
+  transition: color 0.25s;
+}
+
+.hiw-card:hover .hiw-card-title {
+  color: var(--hiw-accent);
+}
+
+.hiw-card-desc {
+  font-size: 14px;
+  color: var(--hiw-muted);
+  font-weight: 400;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ── responsive tweaks ── */
+@media (max-width: 560px) {
+  .hiw-section {
+    padding: 72px 16px 90px;
+  }
+
+  .hiw-card {
+    flex-direction: row;
+    text-align: left;
+    padding: 22px 20px;
+    gap: 18px;
+  }
+
+  .hiw-icon-wrap {
+    flex-shrink: 0;
+    width: 58px;
+    height: 58px;
+    border-radius: 16px;
+    margin-bottom: 0;
+  }
+
+  .hiw-icon {
+    font-size: 22px;
+  }
+
+  .hiw-card-title {
+    font-size: 16px;
+  }
+}

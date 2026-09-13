@@ -1,0 +1,34 @@
+.settings-title { font-size: 24px; margin-bottom: 20px; }
+.settings-page { max-width: 560px; display: flex; flex-direction: column; gap: 18px; }
+
+.settings-block { padding: 22px; }
+.settings-block h4 { font-size: 15px; margin-bottom: 16px; }
+
+.settings-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border-light);
+  font-size: 14px;
+}
+.settings-row:last-child { border-bottom: none; }
+
+.toggle-switch {
+  width: 42px; height: 24px; border-radius: var(--radius-full);
+  background: var(--color-border);
+  position: relative;
+  transition: var(--transition);
+}
+.toggle-switch.on { background: var(--color-primary); }
+.toggle-knob {
+  position: absolute; top: 2px; left: 2px;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: #fff; transition: var(--transition);
+}
+.toggle-switch.on .toggle-knob { left: 20px; }
+
+.settings-form { display: flex; flex-direction: column; gap: 12px; }
+.settings-form input {
+  padding: 12px 14px; border: 1px solid var(--color-border);
+  border-radius: var(--radius-md); font-size: 14px; outline: none;
+}
+.settings-form input:focus { border-color: var(--color-primary-light); }

@@ -1,0 +1,9 @@
+.media-upload-btn {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--color-text-gray);
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.media-upload-btn:hover { background: var(--color-primary-lighter); color: var(--color-primary); }

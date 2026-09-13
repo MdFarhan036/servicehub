@@ -1,0 +1,63 @@
+/* Container */
+.blob-container {
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+  overflow: hidden;
+}
+
+/* Base Blob Style */
+.blob {
+  position: absolute;
+  width: 288px; /* 72 * 4 */
+  height: 288px;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.3;
+  mix-blend-mode: multiply;
+  animation: blobMove 10s infinite ease-in-out;
+}
+
+/* Individual Positions + Colors */
+
+.blob-purple {
+  background-color: #c084fc;
+  top: -100px;
+  left: -100px;
+}
+
+.blob-blue {
+  background-color: #60a5fa;
+  top: 200px;
+  right: -100px;
+}
+
+.blob-pink {
+  background-color: #f472b6;
+  bottom: -100px;
+  left: 200px;
+}
+
+/* Animation Delays */
+
+.delay-2 {
+  animation-delay: 2s;
+}
+
+.delay-4 {
+  animation-delay: 4s;
+}
+
+/* Blob Animation */
+
+@keyframes blobMove {
+  0%, 100% {
+    transform: scale(1) translate(0px, 0px);
+  }
+  33% {
+    transform: scale(1.1) translate(30px, -50px);
+  }
+  66% {
+    transform: scale(0.9) translate(-20px, 20px);
+  }
+}

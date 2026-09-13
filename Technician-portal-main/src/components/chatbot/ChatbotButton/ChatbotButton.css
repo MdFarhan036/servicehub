@@ -1,0 +1,19 @@
+.chatbot-fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 24px;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--shadow-lg);
+  z-index: 300;
+  transition: var(--transition);
+}
+.chatbot-fab:hover { background: var(--color-primary-hover); transform: translateY(-2px); }
+
+@media (max-width: 900px) {
+  .chatbot-fab { bottom: 78px; right: 16px; }
+}

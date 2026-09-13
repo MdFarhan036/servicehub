@@ -1,0 +1,364 @@
+/* ═══════════════════════════════════════════════════════════
+   CommentSection.css  –  Clean Light Aesthetic
+   Font: 'Fraunces' (display) + 'DM Sans' (body)
+   Palette: Soft white bg · Slate text · Indigo accent
+═══════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,900&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+/* ── tokens ── */
+:root {
+  --cs-bg:        #f5f7ff;
+  --cs-surface:   #ffffff;
+  --cs-surface2:  #f0f2fb;
+  --cs-border:    #e2e6f3;
+  --cs-accent:    #4f46e5;
+  --cs-accent2:   #3730b8;
+  --cs-accent-lt: rgba(79, 70, 229, 0.08);
+  --cs-text:      #111827;
+  --cs-muted:     #6b7280;
+  --cs-radius:    18px;
+  --cs-font-d:    'Fraunces', Georgia, serif;
+  --cs-font-b:    'DM Sans', sans-serif;
+}
+
+/* ── section ── */
+.cs-section {
+  position: relative;
+  background: var(--cs-bg);
+  padding: 100px 24px 120px;
+  font-family: var(--cs-font-b);
+  overflow: hidden;
+  color: var(--cs-text);
+}
+
+/* ── ambient blobs ── */
+.cs-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(110px);
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+.cs-blob--a {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, #a5b4fc, transparent 70%);
+  top: -80px;
+  right: -80px;
+}
+
+.cs-blob--b {
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, #c7d2fe, transparent 70%);
+  bottom: 0;
+  left: -60px;
+}
+
+/* ── wrapper ── */
+.cs-wrapper {
+  max-width: 680px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── header ── */
+.cs-header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.cs-eyebrow {
+  display: inline-block;
+  font-family: var(--cs-font-b);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--cs-accent);
+  background: var(--cs-accent-lt);
+  border: 1px solid rgba(79, 70, 229, 0.18);
+  padding: 5px 14px;
+  border-radius: 100px;
+  margin-bottom: 18px;
+}
+
+.cs-title {
+  font-family: var(--cs-font-d);
+  font-size: clamp(36px, 6vw, 56px);
+  font-weight: 900;
+  line-height: 1.05;
+  color: var(--cs-text);
+  margin: 0 0 14px;
+  letter-spacing: -1px;
+}
+
+.cs-subtitle {
+  font-size: 16px;
+  color: var(--cs-muted);
+  font-weight: 300;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+/* ── form ── */
+.cs-form {
+  background: var(--cs-surface);
+  border: 1px solid var(--cs-border);
+  border-radius: var(--cs-radius);
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-bottom: 44px;
+  box-shadow:
+    0 1px 3px rgba(79,70,229,0.06),
+    0 20px 50px rgba(79,70,229,0.07);
+}
+
+.cs-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cs-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cs-muted);
+}
+
+.cs-input,
+.cs-textarea {
+  background: var(--cs-surface2);
+  border: 1px solid var(--cs-border);
+  border-radius: 12px;
+  color: var(--cs-text);
+  font-family: var(--cs-font-b);
+  font-size: 15px;
+  font-weight: 400;
+  padding: 14px 18px;
+  outline: none;
+  transition: border-color 0.25s, box-shadow 0.25s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cs-input::placeholder,
+.cs-textarea::placeholder {
+  color: #b0b7c9;
+}
+
+.cs-input:focus,
+.cs-textarea:focus {
+  border-color: rgba(79, 70, 229, 0.45);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  background: #ffffff;
+}
+
+.cs-textarea {
+  resize: vertical;
+  min-height: 110px;
+  line-height: 1.65;
+}
+
+/* ── submit btn ── */
+.cs-btn {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--cs-accent);
+  color: #ffffff;
+  font-family: var(--cs-font-b);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 13px 26px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.28);
+}
+
+.cs-btn:hover {
+  background: var(--cs-accent2);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.36);
+}
+
+.cs-btn:active {
+  transform: scale(0.97);
+}
+
+.cs-btn-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+/* ── divider ── */
+.cs-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  color: var(--cs-muted);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.cs-divider::before,
+.cs-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--cs-border);
+}
+
+/* ── comment list ── */
+.cs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── empty state ── */
+.cs-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--cs-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.cs-empty svg {
+  width: 40px;
+  height: 40px;
+  opacity: 0.35;
+  color: var(--cs-accent);
+}
+
+.cs-empty p {
+  font-size: 15px;
+  margin: 0;
+}
+
+/* ── comment card ── */
+.cs-card {
+  display: flex;
+  gap: 18px;
+  background: var(--cs-surface);
+  border: 1px solid var(--cs-border);
+  border-radius: var(--cs-radius);
+  padding: 22px 24px;
+  animation: cs-slideIn 0.4s ease both;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.cs-card:hover {
+  border-color: rgba(79, 70, 229, 0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(79, 70, 229, 0.1);
+}
+
+@keyframes cs-slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── avatar ── */
+.cs-card-avatar {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #ffffff;
+  font-family: var(--cs-font-d);
+  font-size: 19px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25);
+}
+
+/* ── card body ── */
+.cs-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.cs-card-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.cs-card-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--cs-text);
+  letter-spacing: 0.01em;
+}
+
+.cs-card-time {
+  font-size: 12px;
+  color: var(--cs-muted);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.cs-card-text {
+  font-size: 14.5px;
+  color: #4b5563;
+  line-height: 1.72;
+  margin: 0;
+}
+
+/* ── responsive ── */
+@media (max-width: 600px) {
+  .cs-section {
+    padding: 72px 16px 90px;
+  }
+
+  .cs-form {
+    padding: 24px 20px;
+  }
+
+  .cs-btn {
+    align-self: stretch;
+    justify-content: center;
+  }
+
+  .cs-card {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .cs-card-avatar {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+}

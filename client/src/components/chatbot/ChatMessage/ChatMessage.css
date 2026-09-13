@@ -1,0 +1,193 @@
+/* =========================================================
+   CHAT MESSAGES
+========================================================= */
+
+.chat-msg-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  margin-bottom: 14px;
+  width: 100%;
+}
+
+.chat-msg-row.user {
+  flex-direction: row-reverse;
+}
+
+
+/* =========================================================
+   CHAT AVATAR
+========================================================= */
+
+.chat-avatar {
+  width: 28px;
+  height: 28px;
+
+  min-width: 28px;
+
+  border-radius: 50%;
+
+  background: var(--color-primary);
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   MESSAGE BUBBLE
+========================================================= */
+
+.chat-bubble {
+  max-width: 75%;
+
+  padding: 10px 13px;
+
+  border-radius: 15px;
+
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  line-height: 1.5;
+
+  position: relative;
+
+  word-break: break-word;
+  overflow-wrap: anywhere;
+
+  animation: chatMessageIn 0.2s ease;
+}
+
+
+/* BOT */
+
+.chat-msg-row.bot .chat-bubble {
+  background: var(--color-bg-alt);
+  color: var(--color-text-body);
+
+  border-bottom-left-radius: 4px;
+}
+
+
+/* USER */
+
+.chat-msg-row.user .chat-bubble {
+  background: var(--color-primary);
+  color: #fff;
+
+  border-bottom-right-radius: 4px;
+}
+
+
+/* =========================================================
+   MEDIA MESSAGES
+========================================================= */
+
+.chat-media {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-media img,
+.chat-media video {
+  display: block;
+
+  width: auto;
+  max-width: 220px;
+  max-height: 220px;
+
+  border-radius: 10px;
+
+  object-fit: cover;
+}
+
+.chat-media video {
+  background: #000;
+}
+
+
+/* =========================================================
+   MESSAGE TEXT WITH MEDIA
+========================================================= */
+
+.chat-media .chat-bubble-text {
+  margin-top: 6px;
+}
+
+
+/* =========================================================
+   MESSAGE TIME
+========================================================= */
+
+.chat-time {
+  display: block;
+
+  font-size: 9.5px;
+  line-height: 1;
+
+  opacity: 0.6;
+
+  margin-top: 5px;
+
+  text-align: right;
+}
+
+.chat-msg-row.user .chat-time {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* =========================================================
+   MESSAGE ANIMATION
+========================================================= */
+
+@keyframes chatMessageIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .chat-msg-row {
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .chat-avatar {
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+    font-size: 10px;
+  }
+
+  .chat-bubble {
+    max-width: 82%;
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+
+  .chat-media img,
+  .chat-media video {
+    max-width: 190px;
+    max-height: 190px;
+  }
+}

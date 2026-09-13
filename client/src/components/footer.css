@@ -1,0 +1,312 @@
+/* ═══════════════════════════════════════════════════════════
+   footer.css  –  Light Editorial Aesthetic
+   Font: 'Fraunces' (display) + 'DM Sans' (body)
+   Palette: Deep slate bg · Soft text · Indigo accent
+═══════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+/* ── tokens ── */
+:root {
+  --ft-bg:        #0f1117;
+  --ft-surface:   #181c27;
+  --ft-border:    rgba(255,255,255,0.07);
+  --ft-accent:    #6366f1;
+  --ft-accent-lt: rgba(99,102,241,0.12);
+  --ft-text:      #e2e8f0;
+  --ft-muted:     #94a3b8;
+  --ft-radius:    14px;
+  --ft-font-d:    'Fraunces', Georgia, serif;
+  --ft-font-b:    'DM Sans', sans-serif;
+}
+
+/* ── footer shell ── */
+.ft-footer {
+  position: relative;
+  background: var(--ft-bg);
+  font-family: var(--ft-font-b);
+  overflow: hidden;
+}
+
+/* ── wave transition from light sections above ── */
+.ft-wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  pointer-events: none;
+}
+
+.ft-wave svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* subtle dot grid */
+.ft-footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(99,102,241,0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+/* ── container ── */
+.ft-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 90px 24px 48px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── grid ── */
+.ft-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 56px;
+}
+
+@media (max-width: 1024px) {
+  .ft-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+  }
+}
+
+@media (max-width: 560px) {
+  .ft-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* ── brand col ── */
+.ft-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* logo */
+.ft-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--ft-font-d);
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--ft-text);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.ft-logo-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(99,102,241,0.4);
+  flex-shrink: 0;
+}
+
+.ft-tagline {
+  font-size: 14px;
+  color: var(--ft-muted);
+  line-height: 1.75;
+  font-weight: 300;
+  margin: 0;
+  max-width: 300px;
+}
+
+/* ── social icons ── */
+.ft-socials {
+  display: flex;
+  gap: 10px;
+}
+
+.ft-social {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--ft-surface);
+  border: 1px solid var(--ft-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s, border-color 0.25s, transform 0.2s, box-shadow 0.25s;
+}
+
+.ft-social img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: brightness(0) invert(0.7);
+  transition: filter 0.25s;
+}
+
+.ft-social:hover {
+  background: var(--ft-accent-lt);
+  border-color: rgba(99,102,241,0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(99,102,241,0.2);
+}
+
+.ft-social:hover img {
+  filter: brightness(0) invert(1);
+}
+
+/* ── link columns ── */
+.ft-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ft-heading {
+  font-family: var(--ft-font-b);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ft-accent);
+  margin: 0 0 16px;
+}
+
+.ft-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ft-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--ft-muted);
+  text-decoration: none;
+  padding: 6px 0;
+  transition: color 0.2s, transform 0.2s;
+  position: relative;
+}
+
+.ft-list a::before {
+  content: '';
+  width: 0;
+  height: 1px;
+  background: var(--ft-accent);
+  transition: width 0.25s;
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+}
+
+.ft-list a:hover {
+  color: var(--ft-text);
+  transform: translateX(4px);
+}
+
+.ft-list a:hover::before {
+  width: 100%;
+}
+
+/* ── app col ── */
+.ft-app-desc {
+  font-size: 13.5px;
+  color: var(--ft-muted);
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0 0 18px;
+}
+
+.ft-app-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ft-app-btn {
+  display: inline-block;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.ft-app-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
+
+.ft-app-btn img {
+  height: 42px;
+  border-radius: 10px;
+  display: block;
+}
+
+/* ── divider ── */
+.ft-divider {
+  height: 1px;
+  background: var(--ft-border);
+  margin-bottom: 28px;
+}
+
+/* ── bottom bar ── */
+.ft-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.ft-copy {
+  font-size: 13px;
+  color: var(--ft-muted);
+  margin: 0;
+}
+
+.ft-bottom-links {
+  display: flex;
+  gap: 20px;
+}
+
+.ft-bottom-links a {
+  font-size: 13px;
+  color: var(--ft-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.ft-bottom-links a:hover {
+  color: var(--ft-text);
+}
+
+/* ── responsive ── */
+@media (max-width: 560px) {
+  .ft-container {
+    padding: 80px 16px 40px;
+  }
+
+  .ft-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .ft-app-buttons {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,134 @@
+.contact-page {
+  background: #f8fafc;
+}
+
+/* HERO */
+.contact-hero {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(
+    135deg,
+    #6c2bd9,
+    #4f46e5
+  );
+  color: white;
+}
+
+.contact-hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+/* MAIN */
+.contact-main {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  padding: 60px 20px;
+}
+
+.contact-form-box,
+.contact-info-box {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.contact-form-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form-box input,
+.contact-form-box textarea {
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.contact-form-box button {
+  background: #6c2bd9;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.success-msg {
+  color: green;
+  margin-top: 15px;
+}
+
+/* INFO */
+.info-item {
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* FAQ */
+.contact-faq {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.contact-faq h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px,1fr)
+  );
+  gap: 20px;
+}
+
+.faq-card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+}
+
+/* MAP */
+.contact-map {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+/* CTA */
+.contact-cta {
+  text-align: center;
+  padding: 70px 20px;
+  background: #111827;
+  color: white;
+}
+
+.contact-cta button {
+  margin-top: 20px;
+  background: #6c2bd9;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .contact-main {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-hero h1 {
+    font-size: 30px;
+  }
+}

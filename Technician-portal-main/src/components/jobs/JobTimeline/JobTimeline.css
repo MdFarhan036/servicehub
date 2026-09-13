@@ -1,0 +1,28 @@
+.job-timeline { position: relative; padding-left: 6px; }
+
+.timeline-item {
+  display: flex;
+  gap: 14px;
+  padding-bottom: 22px;
+  position: relative;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 5px; top: 16px; bottom: 0;
+  width: 2px;
+  background: var(--color-border);
+}
+.timeline-item:last-child::before { display: none; }
+
+.timeline-dot {
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--color-border);
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+.timeline-item.done .timeline-dot { background: var(--color-primary); }
+
+.timeline-step { font-size: 14px; font-weight: 600; color: var(--color-text-dark); }
+.timeline-item:not(.done) .timeline-step { color: var(--color-text-gray); font-weight: 500; }
+.timeline-time { font-size: 12px; color: var(--color-text-gray); }
